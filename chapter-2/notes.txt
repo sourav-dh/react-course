@@ -1,0 +1,31 @@
+(1)npm : It doesn't stands for node package manager. It is a package manager for Javascript applications.
+
+(2)Dependency and dev-Dependency : inside package.json we will mention the package name inside dependency which are required to run the application on production (like: React). Whereas we will mention the package name inside devdependency which are required for development only (like: parcel)
+
+(3)Package.json vs package-lock.json : package.json will contain all the dependency / devdependency for the packages. We can mention caret(^) sign to upgrade the minor version release automatically or tilde(~) sign to upgrade the major version of the package automatically.
+package-local.json contains the exact version which is running in that application. It also contain a integrity hash to validate the local and production version. It also includes the dependency package versions. So when we do "npm install", it will automatically install the versions of the package as per package-local.json
+
+(4)gitignore : should hane node_module all temp/dist/cache folder. Basically which we can regenerate should be present in gitignore
+
+(5)Parcel : npm install -D parcel
+            npx parcel index.html
+    Benefits : 
+        -It is a bundler / build tool which provides a dev server. run "parcel index.html"
+        -Hot reloading : Make code change and save will automatically update on browser
+        -If there will be any error in code, parcel will show beautiful Diagnostics
+        -Reliable caching
+        -Tree Shaking: It statically analyzes the imports and exports of each module, and removes everything that isn't used.
+        -Minification : Parcel includes minifiers for JavaScript, CSS, HTML, and SVG out of the box! Just run parcel build index.html, and your whole application will be built and optimized automatically.
+        -Image optimization
+        -Compression : Compress your app before you deploy using Gzip and Brotli.
+        -Content hashing
+
+(6)Browserlist : mention inside package.json 
+    browserlist: {
+        last 2 version
+    }
+
+Practical Work : 
+npm install React
+npm install react-dom
+use the previous code and make that using react module not cdn
