@@ -1,0 +1,18 @@
+(1)Instead of using "npx parcel index.html", we can mention that inside package.json script section. If we type "npm start", it will consider "npm run start" as start is a reserved keyword.
+
+(2)JSX : It is an extension of javascript which use HTML like syntax.
+    -Babel convert JXS to react element. like: "<h1>Heading</h1>" will be converted to React.createElement('h1', {}, 'Heading') by babbel
+    -File name should starts with uppercase
+    -we can use {} to pass any valid JSX
+    -For multiline we will use ()
+
+(3)React Component - Class Component (Older way) & Functional Component (New approach)
+
+(4)React Functional Component : This is a function which will return a JSX.
+    We can pass one component inside another component which is known as component composotion.
+    We can use any one of the below approach to render a component : 
+    <component />
+    <component></component>
+    {component()}
+
+(5)Component composition : When one component is used inside another component
