@@ -1,0 +1,13 @@
+(1)Emmet : It will help developers to write html/css code faster by using shotcut. For example in VSC editor if we use "html:5" and enter then it will generate the actual blank HTML skeleton. 
+
+(2)Library VS Framework : A library is set of functions which we can import and use in our applications. Also we can use any parts of our application. For example if we are using react which is a library can be used in only header/footer/side bar.
+Whereas framework is a large acchitechture that dictates the structure, flow and behavor of an application. They also provide a design pattern such as MVC. Unlike library where developers can call the library function, framework follow "Inversion of control". That means the framework will control the flow and call the developers function when necessary.
+
+(3)CDN : Content Delivery Network
+
+(4)Crossorigin in script trag : Whenenver we use a script tag to load external js files in our HTML docuement, browser applies a same-origin policy to restrict that because of seciruty issue. But if we use "crossorigin" attribute then we can access cross origin files.
+
+
+Practical Work : 
+-Create a heading and append with root element using javascript
+-use react CDN and do the above using react
