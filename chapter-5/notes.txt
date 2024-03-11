@@ -1,0 +1,5 @@
+Practical work : 
+-Restaructure code as per inductry standards
+    -Create a src folder and place all react code there
+    -carete a components folder to place all the components
+    -create a utils folder for the static data
