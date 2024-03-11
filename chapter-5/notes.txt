@@ -1,5 +1,19 @@
+***How React works behind the scene to make the process faster ?
+-Components: It is a reusable building blocks which encapsulates their own logic and state.
+-Virtual DOM: This is a virtual repersentation of actual DOM.
+-Whenever there will be any state change, React use "Reconciliation" or "diffing" algorithm. This will compare the current virtual DOM representing the current UI with the previous one to identify the difference. If it will find any difference, then react will only apply necessary changes to the actual DOM. This minimize the number of DOM updates and improve the perfoemance.
+
+That's the reason why react is so popular. It binds the UI and data layer beautifully.
+
+React use "React Fiber Architechture" core algorithm since React 16 to improve the performance.Its headline feature is incremental rendering: the ability to split rendering work into chunks and spread it out over multiple frames.
+
+
+==========================================================================================
 Practical work : 
 -Restaructure code as per inductry standards
     -Create a src folder and place all react code there
     -carete a components folder to place all the components
     -create a utils folder for the static data
+
+-Add event : create a button for "top rated restaurant" and try to filter using console.log
+-usestate hook : to filter data and show top rated restaurents

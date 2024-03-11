@@ -71,3 +71,11 @@ img {
 	border-left: 1px solid #FFF;
 	padding-left: 20px;
 }
+
+.res-filter {
+	padding-bottom: 20px;
+}
+
+.res-filter button {
+	cursor: pointer;
+}
