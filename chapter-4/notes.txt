@@ -1,0 +1,4 @@
+Practical work : 
+-First we will create a food ordering aap with header, body(which will have search, restaurants cards) and footer component.
+-We will be passing props through restaurantcard component
+-We will use swiggy API data as static object, loop through that and show the card components.
