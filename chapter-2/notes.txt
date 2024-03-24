@@ -3,9 +3,9 @@
 (2)Dependency and dev-Dependency : inside package.json we will mention the package name inside dependency which are required to run the application on production (like: React). Whereas we will mention the package name inside devdependency which are required for development only (like: parcel)
 
 (3)Package.json vs package-lock.json : package.json will contain all the dependency / devdependency for the packages. We can mention caret(^) sign to upgrade the minor version release automatically or tilde(~) sign to upgrade the major version of the package automatically.
-package-local.json contains the exact version which is running in that application. It also contain a integrity hash to validate the local and production version. It also includes the dependency package versions. So when we do "npm install", it will automatically install the versions of the package as per package-local.json
+package-lock.json contains the exact version which is running in that application. It also contain a integrity hash contains a cryptographic hash generated based on the contents of the package that was downloaded during the installation process. It also includes the transitive dependencies package versions. So when we do "npm install", it will automatically install the versions of the package as per package-local.json
 
-(4)gitignore : should hane node_module all temp/dist/cache folder. Basically which we can regenerate should be present in gitignore
+(4)gitignore : should have node_module & all temp/dist/cache folder. Basically which we can regenerate should be present in gitignore
 
 (5)Parcel : npm install -D parcel
             npx parcel index.html

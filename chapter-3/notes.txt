@@ -2,13 +2,13 @@
 
 (2)JSX : It is an extension of javascript which use HTML like syntax.
     -Babel convert JXS to react element. like: "<h1>Heading</h1>" will be converted to React.createElement('h1', {}, 'Heading') by babbel
-    -we can use {} to pass any valid JSX
+    -we can use {} to pass any valid JS
     -For multiline we will use ()
 
 (3)React Component - Class Component (Older way) & Functional Component (New approach)
 
 (4)React Functional Component : This is a function which will return a JSX.
-    -File name should starts with uppercase
+    -Function name should starts with uppercase
     -We can pass one component inside another component which is known as "component composotion".
     We can use any one of the below approach to render a component : 
     <component />
