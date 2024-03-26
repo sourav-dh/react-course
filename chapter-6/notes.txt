@@ -1,0 +1,20 @@
+(1)-monolithic architecture : where all the services present in one application.
+-microservice architechture : for every service there will be different application which will be hosted in different ports (can be mapped to any domain, like- :1234 mapped with /api). 
+
+(2)React API call approach - 
+page loads -> render page -> API call -> re-render (React's page rendering is very fast)
+
+(3)useEffect(() => { console.log }, []) : useEffect callback function will be called after the component rendered .
+
+(4)Install cors extension to access another domain API
+
+(5)Whenever a state variable updates, react will re-render the component
+
+
+Practical work : 
+(1)Remove static swiggy rest object and call swiggy api to poopulate rest cards using useEffect. Use optional chaining.
+(2)show loading screen if the rest list is empty
+(3)Implement Shimmer ui
+(4)user ternary operator to return different component based on codition
+(5)why we need state variable. example using login/logout button toggle.
+(6)add a search functionality
