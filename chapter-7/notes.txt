@@ -1,0 +1,32 @@
+(1)
+-useEffect(() => {}) : useEffect will be called everytime after the component rendered if there is no dependency array present.
+-useEffect(() => {}, []) : useEffect will be called only once after the component rendered if there is an empty array.
+-useEffect(() => {}, [btnName]) : useEffect will be called whenever the dependency variable updates. Check with login/logout header component .
+
+(2)Always keep useState hook at the starting of the functional component. Don't create state variable inside if, for or function.
+
+(3)We use Client side rouoting for single page application.
+
+
+Practical work : 
+(1)Use react-router-dom to create routing for contact-us, about pages. Create a error page and utilize useRouterError hook to show more information.
+-npm install react-router-dom
+-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+-createBrowserRouter([
+    {
+        path: '/',
+        element: <AppCompoment />
+        errorElement: <Errorcomponent />
+    }
+])
+-root.render(<RouterProvider router={config}>)
+-import { useRouterError } from react-router-dom
+
+
+(2)Children routing
+-Use outlet component to load dynamic config based on the path name
+-Use Link component to navigate to a new route without refresh the page : Do the same for all about us, contact us page.
+
+(3)Dynamic routing
+-create a restaurant menu page which will be shown with every restaurant card click
+- useparams hook to get the params
