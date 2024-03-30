@@ -1,0 +1,104 @@
+import React, { Component, useEffect, useState } from "react";
+import ReactDOM from "react-dom/client";
+
+class ChildClassComponent extends Component {
+	render() {
+		return <p>Count : {this.props.count}</p>;
+	}
+
+	componentDidUpdate() {
+		console.log("componentDidUpdate: called once the component is updated");
+	}
+
+	componentWillUnmount() {
+		console.log("componentWillUnmount: called before unmount");
+	}
+}
+
+class ParentClassCOmponent extends Component {
+	constructor() {
+		super();
+		console.log("Constructor : called before rendering");
+
+		this.state = {
+			count: 0,
+			isShow: true,
+		};
+	}
+
+	componentDidMount() {
+		console.log("componentDidMount : called after rendering");
+	}
+
+	render() {
+		return (
+			<div>
+				<h1>Class components : </h1>
+				{this.state.isShow ? (
+					<ChildClassComponent count={this.state.count} />
+				) : (
+					""
+				)}
+				<button
+					onClick={() => {
+						this.setState({ count: this.state.count + 1 });
+					}}
+				>
+					Increment Count!!!
+				</button>
+				<button
+					onClick={() => {
+						this.setState({ isShow: !this.state.isShow });
+					}}
+				>
+					Toggle Component
+				</button>
+			</div>
+		);
+	}
+}
+
+======================================================================================
+
+const ChildFunctionComponent = ({ count }) => {
+	useEffect(() => {
+		console.log("child component update");
+
+		return () => {
+			console.log("Child unmount...");
+		};
+	}, []);
+
+	return <p>Count functional : {count}</p>;
+};
+
+const ParentFunctionComponent = () => {
+	let [count, setCount] = useState(0);
+	let [isShow, setIsshow] = useState(true);
+	useEffect(() => {
+		console.log("Updating...");
+	}, [count]);
+	return (
+		<div>
+			<h1>FUnctional Component</h1>
+			{isShow ? <ChildFunctionComponent count={count} /> : ""}
+			<button
+				onClick={() => {
+					setCount(++count);
+				}}
+			>
+				click
+			</button>
+			<button
+				onClick={() => {
+					setIsshow(!isShow);
+				}}
+			>
+				toggle
+			</button>
+		</div>
+	);
+};
+
+const main = ReactDOM.createRoot(document.getElementById("main"));
+main.render(<Test />);
