@@ -1,0 +1,10 @@
+(1)Higher order component : It's a function which takes a component as parameter and return the enhanced version of that component .
+
+
+Practical Work : 
+(1) Create a higher order component inside restcardcomponent to show top rated restaurant with a label. From body component  call that higher order function and call that as per the rating condition.
+(2)Update restaurant menu page and show all menu as per category by using accordian.
+(3)Make sure to collapse all accordian and show the one accordinan which is clicked by using both below methods.
+-uncontrolled component : the control is with the child : Add logic to expand colapse according to restaurantmenucategory componenet itself
+-controlled component : where we can control the child component : Remove the accordian logic from restaurantmenucategory and move that to the parent compoent
+-lifting the state up : We can not direactly call the setUseState method from child component. So we can pass the reference function as props to child component and call that. Implement the same to open 1 accordian at a time.
