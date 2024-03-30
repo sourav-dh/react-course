@@ -1,0 +1,14 @@
+(1)If we follow "single responsibility principle" (can be break down codes into modules), then our code will become more re-usable, maintainable, testable.
+
+(2)Optimize application: 
+lazy loading | chunking | code aplitting | dynamic import
+
+
+Practical Work : 
+(1)Create a custom hook to abstract the fetch rest menu details logic and use that hook to the component.
+
+(2)Create a custom hook to check online/offline status. For offline we will show a message instead of rest-cards. We will also show icons on header based on that by reusing the same custom hook.
+
+(3)Use lazy loading with lazy and suspense to create different bundle
+-const Component = lazy(() => import(PATH))
+-<suspense fallback={JSX}><Component /></suspense>
